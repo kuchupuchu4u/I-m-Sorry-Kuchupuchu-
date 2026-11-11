@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8e8eb">
+<title>A Little Letter for My Raju ❤️</title>
+<style>
+:root{--rose:#b85f78;--deep:#74384e;--ink:#49343a;--paper:#fffaf5;--gold:#c49a61}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 15% 10%,#fff7f1 0,transparent 32%),linear-gradient(135deg,#f8e8eb,#f5e9df 55%,#fbeff0);color:var(--ink);font-family:Georgia,'Times New Roman',serif;min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.2;background-image:radial-gradient(#c49a61 0.7px,transparent .7px);background-size:23px 23px}
+.floating{position:fixed;bottom:-40px;z-index:0;color:#c8788f;opacity:.45;pointer-events:none;animation:floatUp linear infinite}
+@keyframes floatUp{to{transform:translateY(-115vh) rotate(35deg);opacity:0}}
+.hero{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:34px 18px;position:relative;z-index:1}
+.hero-inner{text-align:center;max-width:620px;width:100%}
+.eyebrow{font:600 11px/1.5 Arial,sans-serif;letter-spacing:.23em;text-transform:uppercase;color:#a66c79}
+h1{font-size:clamp(2.1rem,8vw,4rem);line-height:1.1;color:var(--deep);font-weight:normal;margin:13px 0}
+.subtitle{font-size:1.08rem;line-height:1.8;color:#795c62;max-width:460px;margin:0 auto 28px}
+.envelope-wrap{width:min(310px,82vw);height:205px;margin:28px auto 25px;position:relative;perspective:900px;filter:drop-shadow(0 18px 22px #9b637033)}
+.envelope{position:absolute;inset:35px 0 0;background:#e8b9c2;border-radius:8px;overflow:hidden}
+.envelope:before{content:"";position:absolute;inset:0;background:linear-gradient(140deg,transparent 49.5%,#d89eaa 50%),linear-gradient(220deg,transparent 49.5%,#f0cbd0 50%)}
+.flap{position:absolute;top:35px;left:0;width:100%;height:115px;background:#f2cbd1;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .9s ease;z-index:3}
+.seal{position:absolute;z-index:4;top:103px;left:50%;transform:translateX(-50%);width:43px;height:43px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#c99768,#f0d7a7);color:#fff;font-size:20px;box-shadow:0 3px 8px #8a59604a;transition:opacity .3s}
+.letter-peek{position:absolute;z-index:2;left:10%;width:80%;height:130px;top:20px;background:#fffaf4;border-radius:4px;transition:transform .9s ease;display:grid;place-items:center;color:#a65e73;font-size:26px}
+.envelope.open .flap{transform:rotateX(180deg);z-index:1}
+.envelope.open .seal{opacity:0}
+.envelope.open .letter-peek{transform:translateY(-65px)}
+button{border:0;cursor:pointer;font:600 14px Arial,sans-serif;letter-spacing:.03em;border-radius:999px;padding:15px 25px;background:linear-gradient(135deg,#a9506b,#c7798d);color:white;box-shadow:0 8px 20px #a9506b35;transition:transform .2s,box-shadow .2s}
+button:hover{transform:translateY(-2px);box-shadow:0 11px 24px #a9506b45}
+button:focus-visible{outline:3px solid #7e4057;outline-offset:4px}
+.hint{font:12px Arial,sans-serif;color:#9a737c;margin-top:14px}
+#letterSection{display:none;position:relative;z-index:1;padding:22px 14px 70px;max-width:900px;margin:0 auto}
+#letterSection.visible{display:block;animation:appear .9s ease both}
+@keyframes appear{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.paper{position:relative;background:var(--paper);border:1px solid #ead8ca;border-radius:5px;padding:clamp(24px,6vw,62px);box-shadow:0 18px 55px #80515b1c}
+.paper:before{content:"";position:absolute;inset:10px;border:1px solid #ead8ca;pointer-events:none}
+.paper-head{text-align:center;margin:0 0 30px;position:relative}
+.paper-head .ornament{color:var(--gold);font-size:22px;letter-spacing:.5em}
+.paper-head h2{font-weight:normal;color:var(--deep);font-size:clamp(1.55rem,5vw,2.3rem);margin:12px 0 8px}
+.paper-head p{font:11px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#a17b78}
+.letter-copy{position:relative;font-size:clamp(15px,2.3vw,17px);line-height:1.88;color:#514047}
+.letter-copy p{margin:0 0 18px}
+.letter-copy .section-line{text-align:center;color:#b16d7d;font-size:19px;margin:25px 0}
+.letter-copy strong{color:#8d4a60;font-weight:normal}
+.signature{font-style:italic;color:var(--deep);font-size:1.2rem}
+.end-card{text-align:center;margin:28px auto 0;padding:28px 18px;max-width:600px;color:#79515e}
+.end-card .heart{font-size:28px}
+.end-card h3{font-weight:normal;font-size:clamp(1.3rem,4vw,1.8rem);color:var(--deep);margin:12px 0}
+.end-card p{line-height:1.7}
+.hug{margin-top:12px}
+footer{text-align:center;padding:25px 12px 38px;color:#a17b83;font:11px Arial,sans-serif;letter-spacing:.12em}
+@media(max-width:520px){.hero{padding:24px 18px}.subtitle{font-size:1rem}.paper{padding:25px 21px}.paper:before{inset:7px}.letter-copy{line-height:1.78}.envelope-wrap{height:190px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="hero" id="top">
+  <div class="hero-inner">
+    <div class="eyebrow">A little something, from the heart</div>
+    <h1>Hey, My Pyari Raju! 🎀❤️</h1>
+    <p class="subtitle">There's something I've been wanting to tell you. I hope you read this with a little patience.</p>
+    <div class="envelope-wrap" aria-label="A pink envelope with a letter">
+      <div class="envelope" id="envelope">
+        <div class="letter-peek">With love &amp; hope</div>
+        <div class="flap"></div>
+        <div class="seal">♥</div>
+      </div>
+    </div>
+    <button id="openButton" type="button">Open Your Letter 💌</button>
+    <div class="hint">A quiet little note, just for you</div>
+  </div>
+</div>
+
+<main id="letterSection">
+  <article class="paper">
+    <header class="paper-head">
+      <div class="ornament">✦ ✧ ✦</div>
+      <h2>To My Pyari Raju, My Madam Ji ❤️</h2>
+      <p>A letter from Gursharan</p>
+    </header>
+    <div class="letter-copy">
+      <p>First of all, I'm extremely sorry for everything. I know I've made some big mistakes, and I genuinely regret hurting you through my words, actions and decisions. You didn't deserve any of it.</p>
+
+      <p>I wish I had handled things differently. Instead of making assumptions, I should have spoken to you, understood your perspective and given our bond the consideration it deserved.</p>
+
+      <p>Raju, mera kabhi intention nahi tha ki main tujhe itna hurt karun. Us waqt mere mind par bahut saari baatein aur doosron ki opinions influence kar rahi thi. Arshi, Ishu aur even reels ne mere mind mein kaafi questions create kar diye. Main unhi thoughts mein ulajhta chala gaya aur apni understanding se zyada doosron ki baaton ko importance dene laga.</p>
+
+      <p>But that doesn't justify anything. Galti meri thi ki maine bina properly soche decisions le liye.</p>
+
+      <p>Mujhe yaad hai jab tune kaha tha ki hum calls aur chats par baat nahi kar paayenge. School mein bhi jab main tujhe bulata tha, toh tu sharma jaati thi aur properly baat nahi kar paati thi. Main teri hesitation samajhne ke bajaye apne mind mein alag-alag assumptions banane laga. Mujhe lagne laga ki shayad tujhe meri utni care nahi hai. Letters, Diwali aur baaki chhoti-chhoti baaton ne bhi meri overthinking badha di.</p>
+
+      <p>I should have communicated instead of letting my insecurities make decisions for me.</p>
+
+      <p>I realise that I've damaged your trust and sometimes put unnecessary pressure on you. I'm genuinely sorry for that. I don't expect everything to become normal overnight, but I do want to earn your trust back through consistent actions rather than empty promises.</p>
+
+      <p>And Madam Ji, jo tune mujhe 20 elements yaad karne ko bole the, woh bhi yaad kar lunga. 😭 Aur ek din banker bhi banke dikhaunga. Is baar sirf bolunga nahi, actually mehnat bhi karunga!</p>
+
+      <p>I want to focus on my studies, build my future and become someone who makes his parents proud. I also want to work on my overthinking, insecurities and behaviour so that the same mistakes don't happen again.</p>
+
+      <p>Raju, hum dono abhi young hain. Humse mistakes hongi, misunderstandings bhi hongi aur kabhi arguments bhi. But I believe that not every problem has to end with us giving up on everything. Sometimes we just need patience, honest communication and a willingness to understand each other.</p>
+
+      <p>I'm not saying everything will be perfect, but I'm willing to make genuine efforts to make things better.</p>
+
+      <p class="section-line">♡ &nbsp; ♡ &nbsp; ♡</p>
+
+      <p>And now, meri Madam Ji, thodi si pyaar wali baat bhi sun le. 😭❤️</p>
+
+      <p>Yaar, mujhe tujhe chhedne mein kitna maza aata tha! Tujhe gussa dilana, phir manana, teri cute si reactions dekhna aur humari faltu ki arguments. 😭 Teri silly बातें, woh nakhre, tera gussa aur woh random conversations — I genuinely miss all those little things.</p>
+
+      <p>Kabhi socha nahi tha ki humari chhoti-chhoti nok-jhok bhi itni special memories ban jayegi. Tu shayad realise bhi nahi karti ki teri kitni saari baatein mere face par smile le aati thi.</p>
+
+      <p>I don't want our memories to be defined by misunderstandings and arguments. I'd rather see us creating happier memories, supporting each other and celebrating each other's little achievements.</p>
+
+      <p>Aur sun, agar tu abhi bhi mujhse gussa hai toh tera gussa bilkul valid hai. Lekin ab maan bhi ja na, please. 😭❤️</p>
+
+      <p>Apun ne gadbad kar di, woh bhi thodi zyada hi. Ab apne is bande ko apni mistakes correct karne ka ek chance de de.</p>
+
+      <p>I'm not asking you to forget everything or pretend nothing happened. I just hope that, if you're comfortable too, we can give ourselves an opportunity to understand things better and slowly rebuild what got damaged.</p>
+
+      <p>I genuinely want you to be happy, achieve your goals and enjoy every little moment of your life. I don't want my expectations to come before your feelings. Your happiness and comfort matter too.</p>
+
+      <p>And finally, God has his own plans. We cannot control everything, but we can certainly make better choices from here onwards. Agar tu bhi chahe, toh hum calmly baithkar sab sort kar sakte hain. No unnecessary arguments, no assumptions, just honest conversations.</p>
+
+      <p><strong>A VERY, VERY, VERY BIG SORRYYYY to my Pyari Raju, My Madam Ji, My Kuchu Puchu!</strong> 🥺❤️</p>
+
+      <p>I'm sorry for hurting you, breaking your trust and not understanding your feelings when I should have.</p>
+
+      <p>I don't expect you to trust my words immediately. I just hope that, with time, my actions will show you that Gursharan genuinely wants to improve.</p>
+
+      <p>I still want to choose you, care for you, tease you, make you laugh and create many more beautiful memories together.</p>
+
+      <p><strong>Please maan ja na, meri Raju. 🥺❤️</strong></p>
+
+      <p>With lots of apologies and a little hope,</p>
+      <p class="signature">Yours,<br>Gursharan ❤️</p>
+    </div>
+  </article>
+
+  <section class="end-card">
+    <div class="heart">♡</div>
+    <h3>No pressure, no expectations.</h3>
+    <p>Just a sincere apology and a little hope. ❤️</p>
+    <button class="hug" id="hugButton" type="button">Sending you a virtual hug 🤗</button>
+    <p id="hugMessage" aria-live="polite"></p>
+  </section>
+  <footer>MADE WITH SINCERITY · GURSHARAN ❤️</footer>
+</main>
+
+<script>
+const envelope=document.getElementById('envelope');
+const openButton=document.getElementById('openButton');
+const letterSection=document.getElementById('letterSection');
+openButton.addEventListener('click',()=>{
+  envelope.classList.add('open');
+  openButton.textContent='Your letter is open ❤️';
+  openButton.disabled=true;
+  window.setTimeout(()=>{
+    letterSection.classList.add('visible');
+    letterSection.scrollIntoView({behavior:'smooth',block:'start'});
+  },650);
+});
+document.getElementById('hugButton').addEventListener('click',()=>{
+  const message=document.getElementById('hugMessage');
+  message.textContent='A warm, gentle hug — whenever you need one. 🤗❤️';
+  for(let i=0;i<12;i++){
+    const heart=document.createElement('span');
+    heart.textContent=['♡','♥','💕','✨'][i%4];
+    heart.className='floating';
+    heart.style.left=(10+Math.random()*80)+'%';
+    heart.style.animationDuration=(3+Math.random()*2)+'s';
+    heart.style.fontSize=(16+Math.random()*16)+'px';
+    document.body.appendChild(heart);
+    setTimeout(()=>heart.remove(),5500);
+  }
+});
+function addAmbientHeart(){
+  const heart=document.createElement('span');
+  heart.className='floating';
+  heart.textContent=['♡','♥','✧'][Math.floor(Math.random()*3)];
+  heart.style.left=Math.random()*100+'%';
+  heart.style.animationDuration=(9+Math.random()*9)+'s';
+  heart.style.fontSize=(13+Math.random()*13)+'px';
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),19000);
+}
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  setInterval(addAmbientHeart,1400);
+}
+</script>
+</body>
+</html>
