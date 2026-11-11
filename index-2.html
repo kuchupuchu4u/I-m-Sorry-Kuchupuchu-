@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>I'm Sorry ❤️</title>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffe0ec, #fff5f7);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px 15px;
+            color: #663344;
+        }
+
+        .container {
+            background: white;
+            max-width: 400px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px #e9b8c9;
+        }
+
+        h1 {
+            color: #e75480;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        button {
+            background: #e75480;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #c93665;
+        }
+
+        #message {
+            display: none;
+            margin-top: 20px;
+            color: #e75480;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>I'm Sorry ❤️</h1>
+
+        <h2>Hey, Kuchu!</h2>
+
+        <p>
+            Sometimes I make mistakes.
+            Sometimes I don't express myself properly.
+            But I never want to hurt you.
+        </p>
+
+        <p>
+            You are precious, and your smile matters.
+        </p>
+
+        <button onclick="showMessage()">
+            Click Here ❤️
+        </button>
+
+        <div id="message">
+            Sending you a big hug! 🫂💕
+        </div>
+
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
